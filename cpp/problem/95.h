@@ -30,8 +30,6 @@ public:
             }
         }
 
-        dp[0] = {};
-
         return dp[n];
     }
 
