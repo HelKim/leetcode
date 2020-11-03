@@ -1,12 +1,11 @@
 
 #include <iostream>
 #include "algorithm"
-#include "problem/94.h"
+#include "problem/99.h"
 
 int main() {
     Solution s;
-    auto res = s.inorderTraversal(buildTree({1, null, 2, 3}));
-    std::for_each(res.cbegin(), res.cend(), [](int x) { std::cout << x << ","; });
+    s.recoverTree(buildTree({3, 1, 4, null, null, 2}));
 
     return 0;
 }
