@@ -1,11 +1,17 @@
 
 #include <iostream>
 #include "algorithm"
-#include "problem/99.h"
+#include "problem/107.h"
 
 int main() {
     Solution s;
-    s.recoverTree(buildTree({3, 1, 4, null, null, 2}));
+    auto result = s.levelOrderBottom(buildTree({3, 9, 20, null, null, 15, 7}));
 
+    for (const auto &v : result) {
+        for (const auto i : v) {
+            std::cout << i << ", ";
+        }
+        std::cout << std::endl;
+    }
     return 0;
 }
