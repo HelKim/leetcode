@@ -19,15 +19,11 @@ public:
                 root = root->left;
             }
 
-            auto *p = s.top();
+            root = s.top();
             s.pop();
-            result.push_back(p->val);
-
-            if (p->right != nullptr) {
-                root = p->right;
-            }
+            result.push_back(root->val);
+            root = root->right;
         }
-
         return result;
     }
 };
