@@ -83,6 +83,8 @@ public:
     }
 
     vector<string> split(const string &str, const string &delim) {
+        if (str.length() == 0) return {};
+
         vector<string> v;
 
         int start = 0;
@@ -92,7 +94,7 @@ public:
             start = end + delim.length();
             end = str.find(delim, start);
         }
-
+        v.push_back(str.substr(start, end));
         return v;
     }
 };
