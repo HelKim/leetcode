@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include "problem/501.h"
+#include "problem/tree/501.h"
 
 int main() {
 
