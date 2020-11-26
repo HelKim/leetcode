@@ -1,12 +1,12 @@
 
 #include <iostream>
-#include "problem/tree/501.h"
+#include "problem/backtrack/10.h"
+
+using namespace std;
 
 int main() {
 
     Solution s;
-
-    s.findMode(buildTree({1,1,2,null,null,2}));
-
+    cout << s.isMatch("bccbbabcaccacbcacaa", ".*b.*c*.*.*.c*a*.c");
     return 0;
 }
