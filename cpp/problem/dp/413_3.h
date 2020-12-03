@@ -9,6 +9,7 @@
 
 using namespace std;
 // 对于长度为n的等差数列（n >= 3), 它有an个子等差数列（包括本身），则an = 2 * an-1 - an-2 + 1
+// a1 = 0, a2 = 0
 class Solution {
 public:
     int numberOfArithmeticSlices(vector<int> &A) {
