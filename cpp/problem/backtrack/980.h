@@ -13,7 +13,7 @@ class Solution {
 public:
     int sum = 0;
     int spaces = 0;
-    vector<bool> visit;
+    vector<vector<bool>> visit;
     int step[4][2] = {{1,  0},
                       {-1, 0},
                       {0,  1},
@@ -25,7 +25,7 @@ public:
         visit.assign(n, vector(m, false));
         auto start = find_start(n, m, grid);
 
-        dfs(start.first, start.second, n, m, 0, grid);
+        dfs(start.first, start.second, n, m, -1, grid);
         return sum;
     }
 
