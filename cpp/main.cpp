@@ -1,10 +1,12 @@
 
 #include <iostream>
-#include "problem/dp/264.h"
+#include "problem/backtrack/126_3.h"
 
 using namespace std;
 
 int main() {
     Solution s;
-    cout << s.nthUglyNumber(1600);
+    vector<string> v{"hot", "dot", "dog", "lot", "log", "cog"};
+    s.findLadders("hit", "cog", v);
 }
+
