@@ -1,36 +1,26 @@
-
 #include <iostream>
-#include "problem/string/13.h"
+#include <vector>
+#include <algorithm>
+#include <string>
+#include "problem/trie/212_2.h"
 
 using namespace std;
 
 int main() {
     Solution s;
 
-//    Node *head = new Node();
-//    head->val = 1;
-//    Node *second = new Node();
-//    second->val = 2;
-//    head->next = second;
-//    Node *third = new Node();
-//    third->val = 3;
-//    head->child = third;
-//
-//    auto *h = s.flatten(head);
-//
-//    auto *cur = h;
-//    while (cur != nullptr) {
-//        cout << cur->val << ",";
-//        cur = cur->next;
-//    }
-//    cout << endl;
-//    cur = h;
-//    while (cur->next != nullptr) cur = cur->next;
-//    while (cur != nullptr) {
-//        cout << cur->val << ",";
-//        cur = cur->prev;
-//    }
+    vector<vector<char>> a{{'o', 'a', 'a', 'n'},
+                           {'e', 't', 'a', 'e'},
+                           {'i', 'h', 'k', 'r'},
+                           {'i', 'f', 'l', 'v'}};
+    vector<string> strs{"oath", "pea", "eat", "rain"};
 
-    cout << s.romanToInt("III") << endl;
+    auto r = s.findWords(a, strs);
+
+    for_each(r.begin(), r.end(), [](string &a) {
+        cout << a << ", ";
+    });
+    cout << endl;
+    return 0;
 }
 
